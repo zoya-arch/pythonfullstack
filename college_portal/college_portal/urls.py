@@ -20,9 +20,12 @@ from student_portal import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('greet/', views.home, name='greet'),
-    path('', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
-    path('home/',views.home,name='home'),
+    path('home/',views.home,name='home_page'),
+    path('about/', views.about, name='about_page'),
+    path('contact/', views.contact, name='contact_page'),
+    path('add/', views.forms1, name='add_data'),
+    path('student_form/', views.Student_form_dj, name='student_form'),  
+    path('login/',views.user_login,name='login'),
+    path('dashboard/',views.dashboard,name='dashboard'),
+    path('logout/',views.user_logout,name='logout') 
 ]
